@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "lint": "eslint . --cache --fix --ext .ts,.tsx",
+    "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,json,css,md,yml}\"",
+    "pretest": "npm run lint",
+    "posttest": "npm run format",
     "dev": "next dev",
     "build": "next build && next export && touch out/.nojekyll",
     "start": "next start"

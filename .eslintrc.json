@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "."
+  },
+  "extends": [
+    // eslint and typescript first
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+
+    // all others
+
+    // prettier last
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "settings": {
+  },
+  "plugins": [
+  ],
+  "rules": {
+  }
+}
