@@ -7,6 +7,7 @@
     "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,json,css,md,yml}\"",
     "pretest": "npm run lint",
     "posttest": "npm run format",
+    "postinstall": "husky install",
     "dev": "next dev",
     "build": "next build && next export && touch out/.nojekyll",
     "start": "next start"
@@ -28,5 +29,9 @@
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "typescript": "^4.1.5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --cache --fix",
+    "*.{css,md,json}": "prettier --write"
   }
 }
