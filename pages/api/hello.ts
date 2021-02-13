@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 const handler = (
   req: NextApiRequest,
-  res: NextApiResponse<unknown>
+  res: NextApiResponse<unknown>,
 ): void | Promise<void> => {
   res.status(200).json({ name: 'John Doe' })
 }
