@@ -17,6 +17,9 @@
     // all others
     "plugin:import/recommended",
     "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
 
     // prettier last
     "plugin:prettier/recommended",
