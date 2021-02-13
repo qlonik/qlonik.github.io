@@ -18,7 +18,7 @@ jobs:
         id: pnpm-cache-dir-path
         run: echo "::set-output name=dir::$(pnpm config get store-dir)"
 
-      - name: Cache pnpm
+      - name: 💾 Cache pnpm
         uses: actions/cache@v2
         with:
           path: ${{ steps.pnpm-cache-dir-path.outputs.dir }}
@@ -26,16 +26,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-
 
-      - name: Cache Next.js
+      - name: 💾 Cache Next.js
         uses: actions/cache@v2
         with:
           path: ${{ github.workspace }}/.next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - run: pnpm i --frozen-lockfile
-      - run: pnpm run build
+      - name: 🔨 Build
+        run: pnpm run build
 
-      - name: Deploy 🚀
+      - name: 🚀 Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           branch: gh-pages
