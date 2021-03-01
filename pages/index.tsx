@@ -6,8 +6,8 @@ import type { TypographyProps } from '@material-ui/core/Typography'
 import Typography from '@material-ui/core/Typography'
 import Head from 'next/head'
 
-import type { LinkProps } from '../src/Link'
-import { Link } from '../src/Link'
+import type { LinkProps } from '../src/components/link'
+import { Link } from '../src/components/link'
 
 const Container = styled('div')`
   min-height: 100vh;
