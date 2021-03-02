@@ -1,3 +1,4 @@
+import { flow, identity } from '@effect-ts/core/Function'
 import createEmotionServer from '@emotion/server/create-instance'
 import { ServerStyleSheets } from '@material-ui/core/styles'
 import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
@@ -33,9 +34,14 @@ Document.getInitialProps = async (ctx) => {
   const sheets = new ServerStyleSheets()
   const initialProps = await NextDocument.getInitialProps({
     ...ctx,
-    renderPage: () =>
+    renderPage: (opts = {}) =>
       ctx.renderPage({
-        enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
+        enhanceComponent:
+          typeof opts === 'function' ? opts : opts.enhanceComponent,
+        enhanceApp: flow(
+          (typeof opts === 'object' && opts.enhanceApp) || identity,
+          (App) => (props) => sheets.collect(<App {...props} />),
+        ),
       }),
   })
 
