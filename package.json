@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "check": "tsc",
     "lint": "eslint . --cache --fix --ext .ts,.tsx",
     "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,json,css,md,yml}\"",
-    "pretest": "npm run lint",
+    "pretest": "npm run check && npm run lint",
     "posttest": "npm run format",
     "postinstall": "husky install",
     "dev": "next dev",
