@@ -1,4 +1,5 @@
 dependencies:
+  '@effect-ts/core': 0.25.3
   '@emotion/cache': 11.1.3
   '@emotion/react': 11.1.5_@types+react@17.0.2+react@17.0.1
   '@emotion/server': 11.0.0
@@ -157,6 +158,23 @@ packages:
     dev: false
     resolution:
       integrity: sha512-jBD+G8+LWpMBBWvVcdr4QysjUE4mU/syrhN17o1u3gx0/WzJB1kwiVZAXRtWbsIPOwW8pF/YJV5+nmetPzepXg==
+  /@effect-ts/core/0.25.3:
+    dependencies:
+      '@effect-ts/system': 0.22.3
+      '@effect-ts/tracing-utils': 0.4.2
+    dev: false
+    resolution:
+      integrity: sha512-AXtIaVOf6clNDjVG90UUEvAJzBYncaGNvhl1v1hS6jgNhz6stOJsYsKslKo8EShPbXAcF2qphT+KdYqH/EyCcw==
+  /@effect-ts/system/0.22.3:
+    dependencies:
+      '@effect-ts/tracing-utils': 0.4.2
+    dev: false
+    resolution:
+      integrity: sha512-ks7DMesht+rHqkaoNmx6asVn4Ni6PHV7niHVLjQ4xNJIAC89xbLnUB0qda4S/x9/qhd5eUigCUORMrbXjlYIjg==
+  /@effect-ts/tracing-utils/0.4.2:
+    dev: false
+    resolution:
+      integrity: sha512-Ljh3MhS8/59OQN9YUF/trBgTjxUENOqLe65FSiDI3FpsjXOfOhE/0572nH8U0IRzSrDil2MVDg1NU31xrHakGw==
   /@emotion/babel-plugin/11.2.0:
     dependencies:
       '@babel/helper-module-imports': 7.12.13
@@ -4611,6 +4629,7 @@ packages:
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
+  '@effect-ts/core': ^0.25.3
   '@emotion/cache': ^11.1.3
   '@emotion/react': ^11.1.5
   '@emotion/server': ^11.0.0
