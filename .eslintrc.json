@@ -22,8 +22,7 @@
     "plugin:jsx-a11y/recommended",
 
     // prettier last
-    "plugin:prettier/recommended",
-    "prettier/@typescript-eslint"
+    "plugin:prettier/recommended"
   ],
   "settings": {
     "import/resolver": {
