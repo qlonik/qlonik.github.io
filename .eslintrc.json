@@ -37,6 +37,7 @@
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/no-unused-vars": "off",
     "import/first": "error",
+    "import/namespace": "off",
     "import/order": "off",
     "react/react-in-jsx-scope": "off",
     "simple-import-sort/exports": "error",
