@@ -4,7 +4,7 @@ import { ServerStyleSheets } from '@material-ui/core/styles'
 import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
 import * as React from 'react'
 
-import { theme } from '../src/theme'
+import { Theme } from '../src/theme'
 import { cache } from './_app'
 
 const server = createEmotionServer(cache)
@@ -14,7 +14,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta name="theme-color" content={Theme.palette.primary.main} />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"

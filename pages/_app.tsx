@@ -6,7 +6,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
 
-import { theme } from '../src/theme'
+import { Theme } from '../src/theme'
 
 export const cache = createCache({ key: 'css', prepend: true })
 
@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         <title>My page</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={Theme}>
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
