@@ -5,6 +5,7 @@ dependencies:
   '@emotion/react': 11.1.5_@types+react@17.0.2+react@17.0.1
   '@emotion/server': 11.0.0
   '@emotion/styled': 11.1.5_a444bc1706cb5f754e69bc6eb4e89491
+  '@fontsource/roboto': 4.2.2
   '@material-ui/core': 5.0.0-alpha.26_1f092169ac92beab8fb19447205acc59
   clsx: 1.1.1
   next: 10.0.7_5347ba9dae72bc17e95cc7756ff465f1
@@ -266,6 +267,10 @@ packages:
       node: ^10.12.0 || >=12.0.0
     resolution:
       integrity: sha512-2ZPCc+uNbjV5ERJr+aKSPRwZgKd2z11x0EgLvb1PURmUrn9QNRXFqje0Ldq454PfAVyaJYyrDvvIKSFP4NnBog==
+  /@fontsource/roboto/4.2.2:
+    dev: false
+    resolution:
+      integrity: sha512-VzYWCdqjrepaT7dezuaTZXKaW1L+f5FSp7DGxMqTrf81OTzh9xpKIpr8lgjPg2ZNwiT8rnU++mJ4hojsCnOoqw==
   /@hapi/accept/5.0.1:
     dependencies:
       '@hapi/boom': 9.1.1
@@ -4489,6 +4494,7 @@ specifiers:
   '@emotion/react': ^11.1.5
   '@emotion/server': ^11.0.0
   '@emotion/styled': ^11.1.5
+  '@fontsource/roboto': ^4.2.2
   '@material-ui/core': ^5.0.0-alpha.26
   '@types/node': ^14.14.31
   '@types/react': ^17.0.2
