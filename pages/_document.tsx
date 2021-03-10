@@ -15,10 +15,6 @@ export default class Document extends NextDocument {
       <Html lang="en">
         <Head>
           <meta name="theme-color" content={Theme.palette.primary.main} />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          />
         </Head>
         <body>
           <Main />
