@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build && next export && touch out/.nojekyll",
+    "build:watch": "watch --wait=15 'pnpm run build' pages public src",
     "check": "tsc",
     "clean": "rm -rf .next out",
     "dev": "next dev",
@@ -12,6 +13,7 @@
     "postinstall": "husky install",
     "posttest": "npm run format",
     "pretest": "npm run check && npm run lint",
+    "serve": "serve out",
     "start": "next start"
   },
   "dependencies": {
