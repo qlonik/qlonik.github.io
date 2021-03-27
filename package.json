@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "check": "tsc",
-    "lint": "eslint . --cache --fix --ext .ts,.tsx",
-    "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,json,css,md,yml}\"",
-    "pretest": "npm run check && npm run lint",
-    "posttest": "npm run format",
-    "postinstall": "husky install",
-    "dev": "next dev",
     "build": "next build && next export && touch out/.nojekyll",
+    "check": "tsc",
+    "dev": "next dev",
+    "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,json,css,md,yml}\"",
+    "lint": "eslint . --cache --fix --ext .ts,.tsx",
+    "postinstall": "husky install",
+    "posttest": "npm run format",
+    "pretest": "npm run check && npm run lint",
     "start": "next start"
   },
   "dependencies": {
