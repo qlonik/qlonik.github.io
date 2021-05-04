@@ -11,6 +11,7 @@ module.exports = withPlugins(
     }),
   ],
   {
+    pageExtensions: ['mdx', 'tsx'],
     reactStrictMode: true,
     future: {
       webpack5: true,
