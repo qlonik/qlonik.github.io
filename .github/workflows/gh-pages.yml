@@ -10,9 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - uses: pnpm/action-setup@v1.2.1
+      - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 5
+          version: 6
 
       - name: Get pnpm cache directory path
         id: pnpm-cache-dir-path
