@@ -5,6 +5,7 @@
   "scripts": {
     "build": "next build && next export && touch out/.nojekyll",
     "check": "tsc",
+    "clean": "rm -rf .next out",
     "dev": "next dev",
     "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,json,css,md,yml}\"",
     "lint": "eslint . --cache --fix --ext .ts,.tsx",
