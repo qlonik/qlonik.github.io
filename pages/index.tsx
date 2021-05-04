@@ -5,6 +5,7 @@ import { experimentalStyled as styled } from '@material-ui/core/styles'
 import type { TypographyProps } from '@material-ui/core/Typography'
 import Typography from '@material-ui/core/Typography'
 import Head from 'next/head'
+import * as React from 'react'
 
 import type { LinkProps } from '../src/components/link'
 import { Link } from '../src/components/link'
@@ -27,9 +28,11 @@ const Main = styled('main')`
   align-items: center;
 `
 
-const Title = styled((p: TypographyProps) => (
-  <Typography variant="h1" {...p} />
-))`
+const Title = styled(
+  React.forwardRef<HTMLSpanElement, TypographyProps>(function Title(p, ref) {
+    return <Typography variant="h1" ref={ref} {...p} />
+  }),
+)`
   line-height: 1.15;
   font-size: 4rem;
   font-weight: 500;
@@ -41,9 +44,11 @@ const Subtitle = styled(Typography)`
   margin: 1rem 0;
 `
 
-const Code = styled((p: TypographyProps) => (
-  <Typography variant="code" {...p} />
-))`
+const Code = styled(
+  React.forwardRef<HTMLSpanElement, TypographyProps>(function Code(p, ref) {
+    return <Typography variant="code" ref={ref} {...p} />
+  }),
+)`
   font-size: 1.1rem;
   padding: 0.75rem;
   border-radius: 5px;
@@ -64,9 +69,11 @@ const Grid = styled('div')`
   }
 `
 
-const CardLink = styled((props: LinkProps) => (
-  <Link underline="none" {...props} />
-))`
+const CardLink = styled(
+  React.forwardRef<HTMLAnchorElement, LinkProps>(function CardLink(p, ref) {
+    return <Link underline="none" ref={ref} {...p} />
+  }),
+)`
   margin: 1rem;
 
   flex-basis: 45%;
@@ -74,9 +81,11 @@ const CardLink = styled((props: LinkProps) => (
   color: inherit;
 `
 
-const Tile = styled((p: CardProps) => (
-  <Card {...p} sx={{ boxShadow: 0, ...p.sx }} />
-))`
+const Tile = styled(
+  React.forwardRef<HTMLDivElement, CardProps>(function Tile(p, ref) {
+    return <Card ref={ref} {...p} sx={{ boxShadow: 0, ...p.sx }} />
+  }),
+)`
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
@@ -89,9 +98,14 @@ const Tile = styled((p: CardProps) => (
   }
 `
 
-const TileTitle = styled((p: TypographyProps) => (
-  <Typography variant="h5" gutterBottom {...p} />
-))`
+const TileTitle = styled(
+  React.forwardRef<HTMLSpanElement, TypographyProps>(function TileTitle(
+    p,
+    ref,
+  ) {
+    return <Typography variant="h5" gutterBottom ref={ref} {...p} />
+  }),
+)`
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
   font-weight: 500;
