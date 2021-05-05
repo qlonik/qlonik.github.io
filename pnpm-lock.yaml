@@ -3,7 +3,6 @@ lockfileVersion: 5.3
 specifiers:
   '@babel/core': ^7.14.0
   '@effect-ts/core': ^0.37.5
-  '@effect-ts/system': ^0.34.5
   '@emotion/cache': ^11.1.3
   '@emotion/react': ^11.1.5
   '@emotion/server': ^11.0.0
@@ -43,7 +42,6 @@ specifiers:
 
 dependencies:
   '@effect-ts/core': 0.37.5
-  '@effect-ts/system': 0.34.5
   '@emotion/cache': 11.1.3
   '@emotion/react': 11.1.5_831f89cbe21841773a3c40c686b6446c
   '@emotion/server': 11.0.0
