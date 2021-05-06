@@ -49,5 +49,16 @@
     "simple-import-sort/imports": "error",
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": ["warn", { "ignoreRestSiblings": true }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
 }

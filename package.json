@@ -9,7 +9,7 @@
     "clean": "rm -rf .next out",
     "dev": "next dev",
     "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,json,css,md,yml}\"",
-    "lint": "eslint . --cache --fix --ext .ts,.tsx",
+    "lint": "eslint . --cache --fix --ext .ts,.tsx,.js",
     "postinstall": "husky install",
     "posttest": "npm run format",
     "pretest": "npm run check && npm run lint",
