@@ -11,6 +11,7 @@ specifiers:
   '@material-ui/core': ^5.0.0-alpha.32
   '@mdx-js/loader': ^1.6.22
   '@mdx-js/react': ^1.6.22
+  '@next/eslint-plugin-next': ^10.2.0
   '@next/mdx': ^10.2.0
   '@types/mdx-js__react': ^1.5.3
   '@types/node': ^15.0.1
@@ -61,6 +62,7 @@ dependencies:
 
 devDependencies:
   '@babel/core': 7.14.0
+  '@next/eslint-plugin-next': 10.2.0
   '@types/mdx-js__react': 1.5.3
   '@types/node': 15.0.1
   '@types/react': 17.0.4
@@ -751,6 +753,10 @@ packages:
   /@next/env/10.2.0:
     resolution: {integrity: sha512-tsWBsn1Rb6hXRaHc/pWMCpZ4Ipkf3OCbZ54ef5ukgIyEvzzGdGFXQshPP2AF7yb+8yMpunWs7vOMZW3e8oPF6A==}
     dev: false
+
+  /@next/eslint-plugin-next/10.2.0:
+    resolution: {integrity: sha512-FaW/mZrRwbHz10JmWV/JpK+TJpfB3EWTiJulKa1oJgLjOBaWND3PwmuBkQcBwGEE8vEZjsHpMPA8hToQA73dPw==}
+    dev: true
 
   /@next/mdx/10.2.0_f56c41adb6190c4680be4a1c0222355d:
     resolution: {integrity: sha512-2AwN5Q4Av6McSpVKps2dDGdKEEUdme0cjdmo0iNuBFdBPzMBMeMyIMrT9T/QPCDUtqeB747f6Zkf/Xt2uVwzBg==}
