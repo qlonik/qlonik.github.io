@@ -8,7 +8,7 @@
     "check": "tsc",
     "clean": "rm -rf .next out",
     "dev": "next dev",
-    "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,json,css,md,yml}\"",
+    "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,js,json,css,md,yml,mdx}\"",
     "lint": "eslint . --cache --fix --ext .ts,.tsx,.js",
     "postinstall": "husky install",
     "posttest": "npm run format",
