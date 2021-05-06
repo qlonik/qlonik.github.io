@@ -43,6 +43,7 @@
     "import/first": "error",
     "import/namespace": "off",
     "import/order": "off",
+    "react/jsx-fragments": ["error", "syntax"],
     "react/react-in-jsx-scope": "off",
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": "error",
