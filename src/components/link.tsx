@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import type { LinkProps as MuiLinkProps } from '@material-ui/core/Link'
-import MuiLink from '@material-ui/core/Link'
+
+import type { LinkProps as MuiLinkProps } from '@mui/material/Link'
+import MuiLink from '@mui/material/Link'
 import clsx from 'clsx'
 import type { LinkProps as NextLinkProps } from 'next/link'
 import NextLink from 'next/link'
@@ -91,19 +92,10 @@ export const Link = React.forwardRef(function Link(
 
   if (isExternal) {
     if (noLinkStyle) {
-      return (
-        <a className={className} href={href as string} ref={ref} {...other} />
-      )
+      return <a className={className} href={href} ref={ref} {...other} />
     }
 
-    return (
-      <MuiLink
-        className={className}
-        href={href as string}
-        ref={ref}
-        {...other}
-      />
-    )
+    return <MuiLink className={className} href={href} ref={ref} {...other} />
   }
 
   if (noLinkStyle) {

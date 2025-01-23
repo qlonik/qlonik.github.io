@@ -1,33 +1,23 @@
-import createCache from '@emotion/cache'
-import { CacheProvider } from '@emotion/react'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { ThemeProvider } from '@material-ui/core/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider } from '@mui/material/styles'
+import { AppCacheProvider } from '@mui/material-nextjs/v15-pagesRouter'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import * as React from 'react'
 
 import { Theme } from '../src/theme'
 
-export const cache = createCache({ key: 'css', prepend: true })
-
-export default function App({ Component, pageProps }: AppProps): JSX.Element {
-  React.useEffect(() => {
-    const jssStyles = document.querySelector('#jss-server-side')
-    if (jssStyles && jssStyles.parentElement) {
-      jssStyles.parentElement.removeChild(jssStyles)
-    }
-  }, [])
-
+export default function App(props: AppProps): React.ReactElement {
   return (
-    <CacheProvider value={cache}>
+    <AppCacheProvider {...props}>
       <Head>
         <title>My page</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={Theme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        <props.Component {...props.pageProps} />
       </ThemeProvider>
-    </CacheProvider>
+    </AppCacheProvider>
   )
 }

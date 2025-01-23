@@ -1,9 +1,9 @@
-import type { CardProps } from '@material-ui/core/Card'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import { experimentalStyled as styled } from '@material-ui/core/styles'
-import type { TypographyProps } from '@material-ui/core/Typography'
-import Typography from '@material-ui/core/Typography'
+import type { CardProps } from '@mui/material/Card'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
+import { experimentalStyled as styled } from '@mui/material/styles'
+import type { TypographyProps } from '@mui/material/Typography'
+import Typography from '@mui/material/Typography'
 import Head from 'next/head'
 import * as React from 'react'
 
@@ -137,7 +137,7 @@ const Footer = styled('footer')`
   }
 `
 
-export default function Home(): JSX.Element {
+export default function Home(): React.ReactElement {
   return (
     <Container>
       <Head>

@@ -1,17 +1,15 @@
-import Box from '@material-ui/core/Box'
-import Typography from '@material-ui/core/Typography'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
 import Head from 'next/head'
 import * as React from 'react'
 
-export default function Custom404(): JSX.Element {
+export default function Custom404(): React.ReactElement {
   const status = 404
   const msg = 'This page could not be found'
   return (
     <>
       <Head>
-        <title>
-          {status}: {msg}
-        </title>
+        <title>{`${status}: ${msg}`}</title>
       </Head>
       <Box
         sx={{
@@ -39,9 +37,7 @@ export default function Custom404(): JSX.Element {
         >
           {status}
         </Typography>
-        <Box clone>
-          <Typography variant="subtitle1">{msg}.</Typography>
-        </Box>
+        <Typography variant="subtitle1">{msg}.</Typography>
       </Box>
     </>
   )

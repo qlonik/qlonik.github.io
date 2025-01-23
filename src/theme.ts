@@ -3,10 +3,10 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 
-import { createMuiTheme } from '@material-ui/core'
+import { createTheme } from '@mui/material/styles'
 
 export type Theme = typeof Theme
-export const Theme = createMuiTheme({
+export const Theme = createTheme({
   palette: {
     primary: {
       main: '#0070f3',
@@ -44,7 +44,7 @@ export const Theme = createMuiTheme({
   },
 })
 
-declare module '@material-ui/core/styles' {
+declare module '@mui/material/styles' {
   interface TypographyVariants {
     code: React.CSSProperties
   }
@@ -54,7 +54,7 @@ declare module '@material-ui/core/styles' {
   }
 }
 
-declare module '@material-ui/core/Typography' {
+declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     code: true
   }
