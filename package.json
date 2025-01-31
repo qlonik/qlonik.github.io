@@ -2,6 +2,7 @@
   "name": "qlonik.github.io",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.1.0",
   "scripts": {
     "build": "next build && next export && touch out/.nojekyll",
     "build:watch": "watch --wait=15 'pnpm run build' pages public src",

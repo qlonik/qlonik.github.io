@@ -8,18 +8,16 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v4
 
       - name: Get pnpm cache directory path
         id: pnpm-cache-dir-path
-        run: echo "::set-output name=dir::$(pnpm config get store-dir)"
+        run: echo "dir=$(pnpm config get store-dir)" >> $GITHUB_OUTPUT
 
       - name: 💾 Cache pnpm
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ steps.pnpm-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -27,7 +25,7 @@ jobs:
             ${{ runner.os }}-pnpm-
 
       - name: 💾 Cache Next.js
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/.next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -37,7 +35,7 @@ jobs:
         run: pnpm run build
 
       - name: 🚀 Deploy
-        uses: JamesIves/github-pages-deploy-action@4.0.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: out
