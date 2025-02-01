@@ -18,5 +18,6 @@ export default withPlugins(
     compiler: {
       emotion: true,
     },
+    output: 'export',
   },
 )
